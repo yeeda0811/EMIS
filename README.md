@@ -1,1 +1,27 @@
-# Anti-Gravity 懶人包  這個 repo 只放 Anti-Gravity 使用者可公開套用的懶人包文件，不放個人 NotebookLM 清單、研究產物、生成圖片、測試專案或任何帳號資料。  ## 目前檔案  - `09-AntiGravity專屬懶人包.md`：主懶人包，整理 NotebookLM、Firebase、GitHub 與開工 / 收工 / 新專案初始化流程；Obsidian 只保留為人工專案筆記，不再安裝 MCPVault。 - `.gitignore`：排除本機設定、NotebookLM 匯出、生成圖片、測試 app、API key 與暫存資料。  ## 使用方式  1. 開啟 `09-AntiGravity專屬懶人包.md`。 2. 把文件內容交給 Anti-Gravity 或 AI 編碼助理。 3. 依序完成環境檢查、OAuth 登入、NotebookLM / Firebase MCP 設定與工作流程設定。  ## 安全原則  - NotebookLM 登入走瀏覽器 OAuth；不要複製 cookie、token 或私有匯出檔。 - 不把 `notebooks.json`、NotebookLM 筆記本 ID 清單、研究報告、生成圖片放進公開 repo。 - 不把 API key、GitHub token、Firebase Admin 憑證寫進 Markdown 或 GitHub。 - 收工時先檢查 diff，只提交本次相關檔案，不使用無差別 `git add .`。  ## 相關系列  - Codex 懶人包：https://github.com/mathruffian-dot/codex-lazy-packs - Claude Code 懶人包：https://github.com/mathruffian-dot/claude-code-lazy-packs - OpenCode 懶人包：https://github.com/mathruffian-dot/opencode-lazy-packs
+# Anti-Gravity 懶人包
+
+這個 repo 只放 Anti-Gravity 使用者可公開套用的懶人包文件，不放個人 NotebookLM 清單、研究產物、生成圖片、測試專案或任何帳號資料。
+
+## 目前檔案
+
+- `09-AntiGravity專屬懶人包.md`：主懶人包，整理 NotebookLM、Firebase、GitHub 與開工 / 收工 / 新專案初始化流程；Obsidian 只保留為人工專案筆記，不再安裝 MCPVault。
+- `.gitignore`：排除本機設定、NotebookLM 匯出、生成圖片、測試 app、API key 與暫存資料。
+
+## 使用方式
+
+1. 開啟 `09-AntiGravity專屬懶人包.md`。
+2. 把文件內容交給 Anti-Gravity 或 AI 編碼助理。
+3. 依序完成環境檢查、OAuth 登入、NotebookLM / Firebase MCP 設定與工作流程設定。
+
+## 安全原則
+
+- NotebookLM 登入走瀏覽器 OAuth；不要複製 cookie、token 或私有匯出檔。
+- 不把 `notebooks.json`、NotebookLM 筆記本 ID 清單、研究報告、生成圖片放進公開 repo。
+- 不把 API key、GitHub token、Firebase Admin 憑證寫進 Markdown 或 GitHub。
+- 收工時先檢查 diff，只提交本次相關檔案，不使用無差別 `git add .`。
+
+## 相關系列
+
+- Codex 懶人包：https://github.com/mathruffian-dot/codex-lazy-packs
+- Claude Code 懶人包：https://github.com/mathruffian-dot/claude-code-lazy-packs
+- OpenCode 懶人包：https://github.com/mathruffian-dot/opencode-lazy-packs
