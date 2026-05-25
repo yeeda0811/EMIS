@@ -9,9 +9,22 @@
 
 ## 使用方式
 
-1. 開啟 `09-AntiGravity專屬懶人包.md`。
-2. 把文件內容交給 Anti-Gravity 或 AI 編碼助理。
-3. 依序完成環境檢查、OAuth 登入、NotebookLM / Firebase MCP 設定與工作流程設定。
+### 方式一：直接叫 AI 幫你裝（最簡單）
+
+把這行貼給你的 AI agent：
+
+```
+這是 AntiGravity 懶人包 https://github.com/mathruffian-dot/antigravity-lazy-pack
+請讀取 repo 內容，列出所有可用的懶人包，問我要裝哪些。
+```
+
+AI 會自動讀取 `SKILL.md`（安裝入口），列出 6 個技能，問你要裝哪些，然後自動安裝。
+
+### 方式二：手動開啟 MD 檔
+
+1. 開啟 `09-AntiGravity專屬懶人包.md`
+2. 把文件內容交給 Anti-Gravity 或 AI 編碼助理
+3. 依序完成環境檢查、OAuth 登入、NotebookLM / Firebase MCP 設定與工作流程設定
 
 ## 安全原則
 
