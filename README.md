@@ -1,40 +1,50 @@
-# Anti-Gravity 懶人包
+# EMIS (Employee Leave Management System)
 
-這個 repo 只放 Anti-Gravity 使用者可公開套用的懶人包文件，不放個人 NotebookLM 清單、研究產物、生成圖片、測試專案或任何帳號資料。
+EMIS 是一個基於 Web 的員工請假管理系統。本系統採用前後端分離架構，結合 Supabase 作為後端資料庫，並部署於 Netlify 平台，提供高效、穩定的請假申請與統計服務。
 
-## 目前檔案
+## 系統架構
 
-- `09-AntiGravity專屬懶人包.md`：主懶人包，整理 NotebookLM、Firebase、GitHub 與開工 / 收工 / 新專案初始化流程；Obsidian 只保留為人工專案筆記，不再安裝 MCPVault。
-- `.gitignore`：排除本機設定、NotebookLM 匯出、生成圖片、測試 app、API key 與暫存資料。
+- **前端網頁**：採用響應式 HTML5、CSS3 與 JavaScript，部署於 Netlify。
+- **後端資料庫**：採用 Supabase (PostgreSQL)，管理員工資料、假別配置及請假審核記錄。
+- **版本控制 & CI/CD**：託管於 GitHub 儲存庫 `https://github.com/yeeda0811/EMIS`。
 
-## 使用方式
+## 本地開發與設定
 
-### 方式一：直接叫 AI 幫你裝（最簡單）
+### 先備條件
+1. 本地需安裝 `Node.js`、`npm`、`git`。
+2. 全域安裝 Supabase CLI 用於本地開發：
+   ```powershell
+   npm install -g supabase
+   ```
 
-把這行貼給你的 AI agent：
+### 本地初始化步驟
+1. 複製環境變數範本：
+   ```powershell
+   copy .env.example .env.local
+   ```
+   並於 `.env.local` 中填入您的 `VITE_SUPABASE_URL` 與 `VITE_SUPABASE_ANON_KEY`。
 
-```
-這是 AntiGravity 懶人包 https://github.com/mathruffian-dot/antigravity-lazy-pack
-請讀取 repo 內容，列出所有可用的懶人包，問我要裝哪些。
-```
+2. 初始化本地 Supabase 專案結構：
+   ```powershell
+   supabase init
+   ```
 
-AI 會自動讀取 `SKILL.md`（安裝入口），列出 6 個技能，問你要裝哪些，然後自動安裝。
+## 部署與發佈
 
-### 方式二：手動開啟 MD 檔
+### 1. 前端部署 (Netlify)
+本專案已連結至 GitHub 進行持續整合與部署。當您將變更推送至 GitHub 儲存庫的 `main` 分支時，Netlify 將自動觸發建置與發佈。
+* 請確保在 Netlify 控制台的 **Site settings -> Environment variables** 中設定了相同的 Supabase 連線變數。
 
-1. 開啟 `09-AntiGravity專屬懶人包.md`
-2. 把文件內容交給 Anti-Gravity 或 AI 編碼助理
-3. 依序完成環境檢查、OAuth 登入、NotebookLM / Firebase MCP 設定與工作流程設定
+### 2. 資料庫遷移與持續交付 (Supabase)
+* 透過本地 Supabase CLI 管理資料表結構：
+  ```powershell
+  supabase migration new <migration_name>
+  ```
+* 部署至線上環境：
+  ```powershell
+  supabase db push
+  ```
 
-## 安全原則
-
-- NotebookLM 登入走瀏覽器 OAuth；不要複製 cookie、token 或私有匯出檔。
-- 不把 `notebooks.json`、NotebookLM 筆記本 ID 清單、研究報告、生成圖片放進公開 repo。
-- 不把 API key、GitHub token、Firebase Admin 憑證寫進 Markdown 或 GitHub。
-- 收工時先檢查 diff，只提交本次相關檔案，不使用無差別 `git add .`。
-
-## 相關系列
-
-- Codex 懶人包：https://github.com/mathruffian-dot/codex-lazy-packs
-- Claude Code 懶人包：https://github.com/mathruffian-dot/claude-code-lazy-packs
-- OpenCode 懶人包：https://github.com/mathruffian-dot/opencode-lazy-packs
+## 安全守則
+* 嚴禁提交 `.env.local` 等包含敏感密鑰的檔案至 GitHub。
+* 任何 API 金鑰與敏感連線憑證必須以環境變數形式傳遞。
