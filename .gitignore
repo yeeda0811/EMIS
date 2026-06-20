@@ -8,6 +8,7 @@ Desktop.ini
 # Environment variables and secrets
 .env
 .env.*
+!.env.example
 *.key
 credentials.*
 secrets.*
