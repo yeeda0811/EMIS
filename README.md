@@ -1,11 +1,11 @@
-# EMIS (Employee Leave Management System)
+# EMIS (國小校務與請假管理系統)
 
-EMIS 是一個基於 Web 的員工請假管理系統。本系統採用前後端分離架構，結合 Supabase 作為後端資料庫，並部署於 Netlify 平台，提供高效、穩定的請假申請與統計服務。
+EMIS 是一個基於 Web 的國小校務與請假管理系統。本系統採用前後端分離架構，結合 Supabase 作為後端資料庫，並部署於 Netlify 平台，提供高效、穩定的請假申請與統計服務。
 
 ## 系統架構
 
 - **前端網頁**：採用響應式 HTML5、CSS3 與 JavaScript，部署於 Netlify。
-- **後端資料庫**：採用 Supabase (PostgreSQL)，管理員工資料、假別配置及請假審核記錄。
+- **後端資料庫**：採用 Supabase (PostgreSQL)，管理學生、教職員工資料、假別配置及請假審核記錄。
 - **版本控制 & CI/CD**：託管於 GitHub 儲存庫 `https://github.com/yeeda0811/EMIS`。
 
 ## 本地開發與設定

@@ -55,3 +55,8 @@ images/generated/
 wordcloud-app/
 scratch/
 tmp/
+
+# Custom exclusions
+clasp-netlify-mcp-guide/
+code_artifact.tsx
+
